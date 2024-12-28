@@ -1,0 +1,15 @@
+body{
+    color: var(--mainColor);
+}
+
+.img-cart {
+    width: 50%;
+    margin: 0 auto;
+    display: block;
+}
+
+.card{
+    color: var(--mainColor);
+    border: 5px solid var(--mainColor);
+}
+

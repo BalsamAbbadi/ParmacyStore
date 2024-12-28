@@ -1,0 +1,19 @@
+<?php
+// الاتصال بقاعدة البيانات
+include('db.php');
+
+// استعلام لجلب جميع المستخدمين
+$sql = "SELECT * FROM user";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    // عرض البيانات
+    while ($row = $result->fetch_assoc()) {
+        echo "ID: " . $row['user_id'] . " - Name: " . $row['user_name'] . " - Email: " . $row['email'] . " - Phone: " . $row['phone'] . "<br>";
+    }
+} else {
+    echo "No users found.";
+}
+
+$conn->close();
+?>

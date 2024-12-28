@@ -1,0 +1,94 @@
+/*start header*/
+header {
+    padding: 10px 0;
+    background-color: var(--mainColor);
+}
+
+.navbar{
+    width:50%;
+}
+
+header ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 80px;
+    margin-left: 100px;
+
+}
+
+header .navbar a {
+    color: var(--secondColor);
+}
+
+
+.search form {
+    display: flex;
+    border: 2px solid #ddd;
+}
+
+
+.search input {
+    border: 0;
+    padding: 10px 40px;
+}
+
+.search button {
+    border: 0;
+    padding: 5px 15px;
+    background-color: var(--mainColor);
+    cursor: pointer;
+}
+/*end header*/
+
+
+
+
+h3{
+    color: var(--mainColor);
+}
+
+
+
+
+/*start footer*/
+
+.card-footer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-footer img{
+    cursor: pointer;
+}
+
+
+footer{
+    background-color: var(--mainColor);
+}
+
+.footer{
+    width: 100%;
+    color: var(--mainColor);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer i{
+    font-size: 20px;
+    padding: 20px;
+    color: var(--mainColor);
+    background-color: var(--secondColor);
+    border: 2px var(--mainColor) solid;
+    border-radius: 50%;
+}
+
+/*شغل بلسم */
+
+/*end footer*/
+
+

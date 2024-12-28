@@ -1,0 +1,73 @@
+<!--<?php
+require_once 'db_connection.php';
+session_start();
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+    
+    $email = $conn->real_escape_string($email);
+    $password = $conn->real_escape_string($password);
+
+
+    $query = "SELECT * FROM user WHERE email = '$email' AND password = '$password'";
+    $result = $conn->query($query);
+
+    if ($result->num_rows == 1) {
+        $user = $result->fetch_assoc();
+        $_SESSION['user_ID'] = $user['user_id'];
+        $_SESSION['user_name'] = $user['user_name'];
+        header("Location: user-interface.php");
+        exit();
+    } else {
+        $error_message = "Invalid email or password.";
+    }
+
+    $conn->close();
+}
+?>
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/login.css">
+</head>
+
+<body>
+    <div class="login">
+        <img src="assets/images/public/icon.png" width="15%" />
+        <form id="loginForm" method="POST" action="user-interface.html">
+            <br />
+            <label class="label">UserName</label>
+            <input type="text" name="UserName" required />
+            <br />
+            <br />
+            <label class="label">User Email</label>
+            <input type="email" name="email" id="email" required />
+            <br />
+            <br />
+            <label class="label">Password</label>
+            <input type="password" name="password" required />
+            <br />
+            <br />
+            <input type="submit" value="Sign in" class="submit" id="login" />
+
+            <?php if (isset($error_message)) { ?>
+                <p style="color:red;"><?php echo $error_message; ?></p>
+            <?php } ?>
+
+
+        </form>
+    </div>
+</body>
+
+</html>

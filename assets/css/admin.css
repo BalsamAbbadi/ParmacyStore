@@ -1,0 +1,59 @@
+/* خصائص التصميم العامة */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* تنسيق العناوين */
+h2 {
+    color: #1e2a47;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* خصائص الجداول */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* تنسيق رأس الجدول */
+th {
+    background-color: #1e2a47;
+    color: white;
+    padding: 10px;
+    text-align: left;
+}
+
+/* تنسيق بيانات الجدول */
+td {
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    text-align: left;
+    color: #555;
+}
+
+/* تنسيق الفئات لكل جدول */
+.product-table {
+    margin-bottom: 50px;
+}
+
+/* تنسيق الأزرار (إذا تم إضافتها لاحقًا) */
+button {
+    background-color: #1e2a47;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #3a4a7a;
+}
